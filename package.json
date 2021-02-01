@@ -14,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "@stripe/stripe-js": "^1.11.0",
+    "if-env": "^1.0.4",
+    "stripe": "^8.132.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
