@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
-import { useStoreContext } from "../../utils/GlobalState";
+// import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
+//import {connect} from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 
 function ProductList() {
-  const [state, dispatch] = useStoreContext();
+  const state = useSelector (state => state);
+  const dispatch = useDispatch();
 
+  //const { currentCategory } = props;
   const { currentCategory } = state;
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
@@ -66,4 +69,9 @@ function ProductList() {
   );
 }
 
+// function mapStateToProps (state) {
+//   return {products: state.products, currentCategory: state.currentCategory}
+// }
+
+// export default connect (mapStateToProps) (ProductList);
 export default ProductList;
