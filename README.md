@@ -34,7 +34,7 @@ THEN I find that the app uses Redux instead of the Context API
 ### Screenshots
 
 ##### Homepage
-![Screenshots](./client/public/assets/homepage.PNG)
+![Screenshots](./client/public/assets/homePage.PNG)
 
 ##### Checkout
 ![Screenshots](./client/public/assets/checkout.PNG)
